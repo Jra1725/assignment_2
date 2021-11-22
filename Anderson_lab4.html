@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color:red;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(235, 235, 235, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 36px;
+}
+@media (max-width: 1024px)
+	item1{float: none;
+	width: 100%;
+}
+@media (max-width: 768px)
+	item3{font-size: 46px;
+}
+</style>
+</head>
+<body>
+
+<h1>1010-04</h1>
+
+<p>Jacob Anderson</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">menu</div>
+  <div class="item3">center</div>  
+  <div class="item4">right</div>
+  <div class="item5">bottom</div>
+</div>
+
+</body>
+</html>
